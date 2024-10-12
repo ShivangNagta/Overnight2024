@@ -43,7 +43,7 @@ function Sidebar() {
               className="w-full bg-gradient-to-r from-yellow-500 to-yellow-400 hover:from-yellow-400 hover:to-yellow-300 text-black py-2 px-4 rounded-md shadow-md"
               onClick={() => document.getElementById('geojson-upload').click()}
             >
-              Upload GeoJSON
+              Upload Something
             </button>
             {/* Hidden File Input */}
             <input
@@ -57,7 +57,7 @@ function Sidebar() {
 
           {/* Create Footprints Button */}
           <button className="w-full bg-gradient-to-r from-yellow-500 to-yellow-400 hover:from-yellow-400 hover:to-yellow-300 text-black py-2 px-4 rounded-md shadow-md">
-            Create Footprints
+            Something something
           </button>
         </div>
       </div>
