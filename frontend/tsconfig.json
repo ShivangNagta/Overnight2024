@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "jsx": "react-jsx",    // Ensure this is set to handle JSX
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["./src/*"]
+      }
+    },
+    "include": ["src/**/*"]   // Ensures all files in 'src' are included
+  }
+  
