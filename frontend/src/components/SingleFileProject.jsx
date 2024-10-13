@@ -3,15 +3,17 @@ import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
 import { DragHandleDots2Icon } from '@radix-ui/react-icons';
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
+
 const SingleFileProject = () => {
-    const [sourceLanguage, setSourceLanguage] = useState('javascript'); // Default source language
-    const [targetLanguage, setTargetLanguage] = useState(''); // Target language for conversion
+    const apiKey = import.meta.env.VITE_API_KEY
+    const [sourceLanguage, setSourceLanguage] = useState('javascript'); 
+    const [targetLanguage, setTargetLanguage] = useState('');
     const [code, setCode] = useState('// Write your JavaScript code here');
     const [convertedCode, setConvertedCode] = useState('');
     const [isLoading, setIsLoading] = useState(false);
 
     // Create an instance of GoogleGenerativeAI with your API key
-    const genAI = new GoogleGenerativeAI();
+    const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
     const handleCompileCode = () => {
@@ -57,9 +59,11 @@ const SingleFileProject = () => {
                                 >
                                     <option value="javascript">JavaScript</option>
                                     <option value="python">Python</option>
-                                    <option value="html">HTML</option>
-                                    <option value="css">CSS</option>
-                                    {/* Add more languages as needed */}
+                                    <option value="C++">C++</option>
+                                    <option value="C">C</option>
+                                    <option value="Rust">Rust</option>
+                                    <option value="C#">C#</option>
+                          
                                 </select>
                             </div>
 
@@ -80,9 +84,11 @@ const SingleFileProject = () => {
                                     <option value="">Select language</option>
                                     <option value="javascript">JavaScript</option>
                                     <option value="python">Python</option>
-                                    <option value="html">HTML</option>
-                                    <option value="css">CSS</option>
-                                    {/* Add more languages as needed */}
+                                    <option value="C++">C++</option>
+                                    <option value="C">C</option>
+                                    <option value="Rust">Rust</option>
+                                    <option value="C#">C#</option>
+                                  
                                 </select>
                             </div>
 
